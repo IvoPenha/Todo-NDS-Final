@@ -45,14 +45,11 @@ export const Form = styled.form`
         border: none !important;
         &[type=submit]{
             background-color: var(--brand);
-            border-radius: 4px;
-            border: none ;
             padding: 1rem 0;
-            opacity: 0.8;
+            filter: brightness(.8);
             cursor: pointer;
             &:hover{
-            opacity: 1;
-
+            filter: brightness(1);
 
             }
         }

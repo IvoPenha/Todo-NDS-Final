@@ -7,7 +7,6 @@ function AuthPage() {
 
   return (
     <Container>
-      <GlobalStyle/>
       <Header type="login"/>
       <AuthForm/>
       
