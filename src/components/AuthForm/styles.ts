@@ -1,30 +1,63 @@
 import styled from 'styled-components'
-export const AuthForm = styled.div `
-    overflow: hidden;
-    height: 750px;
-    width: 100%;
+
+
+export const Container = styled.div `
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: #25294C;
-    form{
-        display: flex;
-        flex-direction: column;
-        .input{
-            background-color: transparent;
-            border: #E9ECEF 1px solid;
-            border-radius: 4px;
-            padding: 0 1rem;
+
+`
+
+export const AuthFormDiv = styled.div `
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 11rem;
+    h2{
+        padding-left: 10px;
+        border-left: 7px solid var(--brand);
+    }
+    
+
+
+`
+
+export const Form = styled.form`
+
+    display: flex;
+    flex-direction: column;
+    gap:.1875rem;
+    div{
+        background-color: transparent;
+        border: #E9ECEF 1px solid;
+        border-radius: 4px;
+        width: 20rem;
+        padding: 0.5rem 1rem;
+        margin-bottom:.5rem;
+        &:focus-within{
+            border: var(--brand) 1px solid;
         }
-        input{
-            background: none;
-            border: none;
-            &:focus{
-                outline: none;
+    }
+    input{
+        height: 100%;
+        color: var(--textSecondary);
+        width: 100%;
+        background: none;
+        border: none !important;
+        &[type=submit]{
+            background-color: var(--brand);
+            padding: 1rem 0;
+            filter: brightness(.8);
+            cursor: pointer;
+            &:hover{
+            filter: brightness(1);
+
             }
         }
-
+        &:focus{
+            outline: none;
+        }
+       
     }
 
-
+    
 `
