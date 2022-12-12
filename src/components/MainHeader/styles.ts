@@ -11,7 +11,12 @@ export const Container = styled.div`
     }
 `
 export const IconDiv = styled.div`
-    padding: 1rem;
+    display: flex;
+    align-items : center;
+    justify-content : center;
+    height: 53px;
+    width: 53px;
+    border-radius: 4px;
     background: white;
 `
 export const Header = styled.div`
@@ -22,4 +27,14 @@ export const Header = styled.div`
     display: flex;
     align-items : center;
     justify-content: space-between;
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    section{
+        position: absolute;
+        right: 5rem;
+    }
 `

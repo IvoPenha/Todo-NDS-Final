@@ -11,9 +11,15 @@ export const Container = styled.ul<{ isOpen: boolean }>`
     padding: 0 1rem;
     gap:32px;
     height: 100vh;
+    Link{
+        background: white !important;
+    }
     li{
+        &:first-child {
+            justify-content: space-around;
+        }
       
-        padding: 1rem 0;
+        padding: 1rem;
         border-radius: 10px;
         color:white;
         display: flex;

@@ -15,5 +15,6 @@ export const AuthHeader = styled.div `
         color: #27C498;
     }
     }
+    
 
 `

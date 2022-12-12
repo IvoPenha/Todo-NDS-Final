@@ -4,6 +4,7 @@ import GlobalStyle from "../globalStyles";
 import AuthPage from "../pages/Authentication/AuthPage"
 import { Listage } from "../pages/listage";
 import Register from "../pages/Register/AuthPage";
+import { TaskPage } from "../pages/TaskPage";
 
 
 export function ReactRoutes(){
@@ -13,6 +14,7 @@ export function ReactRoutes(){
           <Route path='/login' element={<AuthPage/>} />
           <Route path='/register' element={<Register/>} />
           <Route path='/Sidebar' element={<Listage/>} />
+          <Route path='/Tasks' element={<TaskPage/>} />
         </Routes>
         <GlobalStyle/>
 

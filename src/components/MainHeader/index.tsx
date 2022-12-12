@@ -26,7 +26,10 @@ export function MainHeader({title, description, button, buttonText, icon} : Main
                     <h3>{description}</h3>
                 </div>
             </Container>
+            <section>
             {button && <MainButton Text={buttonText} />}
+
+            </section>
             
 
         </Header>

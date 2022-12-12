@@ -10,4 +10,8 @@ export const Container = styled.button`
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    transition: all 0.5s;
+    &:hover{
+        filter: brightness(1.2)
+    }
 `
