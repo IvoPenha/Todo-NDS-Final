@@ -13,6 +13,8 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/material": "^5.10.17",
+    "@mui/styled-engine-sc": "^5.10.16",
     "@types/react-bootstrap": "^0.32.32",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
