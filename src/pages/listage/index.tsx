@@ -1,13 +1,19 @@
-import { Sidebar } from "../../components/sidebar";
+import { Sidebar } from "../../components/sidebar/sidebar";
 import { MainHeader } from "../../components/MainHeader";
-import { Container, Content } from "./styles";
+import { Container, Content, MainContent } from "./styles";
 import {faListUl} from '@fortawesome/free-solid-svg-icons'
-import { ListTable } from "../../components/Table";
+import { ListTable } from "../../components/Table/Table";
+
+interface sidebarProps{
+    isOpen: boolean
+}
+
+
 export function Listage(){
     return(
         <Container>
         
-            <Sidebar/>
+            <Sidebar />
         <Content>
             <MainHeader 
                 icon={faListUl}
@@ -16,10 +22,10 @@ export function Listage(){
                 button = {true}
                 buttonText = 'Novo'
             />
-            <div>
+            <MainContent>
 
                 <ListTable/>    
-            </div>
+            </MainContent>
         </Content>
 
         </Container>

@@ -1,5 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
- 
+import styled, { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 
     :root {
@@ -24,5 +23,5 @@ const GlobalStyle = createGlobalStyle`
         color: var(--textSecondary)
     }
 `;
- 
+
 export default GlobalStyle;

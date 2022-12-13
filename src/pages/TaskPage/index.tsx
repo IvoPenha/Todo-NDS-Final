@@ -1,4 +1,4 @@
-import { Sidebar } from "../../components/sidebar";
+import { Sidebar } from "../../components/sidebar/sidebar";
 import { MainHeader } from "../../components/MainHeader";
 import { faCheckSquare } from '@fortawesome/free-regular-svg-icons'
 import { TaskCard } from "../../components/TaskCard";

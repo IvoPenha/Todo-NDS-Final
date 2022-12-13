@@ -1,14 +1,16 @@
 import { useState } from "react";
-import { Container, BottomContainer } from "./styles";
+import { Container, BottomContainer, TopSection } from "./sidebar.styles";
 import { faUserCircle, faCheckSquare } from '@fortawesome/free-regular-svg-icons'
 import { faSignOut,faBars, faListUl,  } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import WhiteLogo from '../../assets/whiteLogo.svg'
-import { Link } from "react-router-dom";
-import { TaskPage } from "../../pages/TaskPage";
+import { VanilaLink } from "./sidebar.styles";
+import { initState} from "../../hooks/useHook";
+
+
 
 export function Sidebar(){
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
     
     function handleIsOpen(){
         setIsOpen(!isOpen)
@@ -17,11 +19,14 @@ export function Sidebar(){
     return(
                
         <Container isOpen ={isOpen}>
+            <TopSection>
+
                 <li> {isOpen ? <img src={WhiteLogo} alt="" /> : <></>}  
                      <button onClick={handleIsOpen}><FontAwesomeIcon icon={faBars} size = 'xl' cursor={'pointer'} className='menu-icon'/></button></li>
-               <Link to={'/tasks'}>  <li><FontAwesomeIcon icon={faCheckSquare} size = '2xl' /> {isOpen ? <h4>Tarefas</h4> : <></>}</li> </Link>
-               <Link to={'/Sidebar'}>  <li> <FontAwesomeIcon icon={faListUl} size = '2xl' /> {isOpen ? <h4>Listas</h4> : <></>} </li> </Link> 
+               <VanilaLink to={'/tasks'}>  <li><FontAwesomeIcon icon={faCheckSquare} size = '2xl' /> {isOpen ? <><h4>Tarefas<p>4</p></h4> </> : <></>}</li> </VanilaLink>
+               <VanilaLink to={'/Sidebar'}>  <li> <FontAwesomeIcon icon={faListUl} size = '2xl' /> {isOpen ? <h4>Listas</h4> : <></>} </li> </VanilaLink> 
                 
+            </TopSection>
                 <BottomContainer isOpen ={isOpen}>
                     <section>
                         <FontAwesomeIcon icon={faUserCircle} size = '2xl' />

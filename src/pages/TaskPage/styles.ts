@@ -11,4 +11,5 @@ export const Content = styled.div`
     width: 75%;
     gap: 48px;
     background-color: var(--background)
+    
 `

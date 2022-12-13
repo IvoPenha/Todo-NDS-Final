@@ -2,28 +2,27 @@ import styled from "styled-components";
 
 export const Container = styled.div`
    background: white;
-   height: 112px;
    width: 250px;
    border: none;
    border-radius: 10px;
    box-shadow: 0.4em 0.4em 1em rgba(0, 0, 0, 0.3);
-   padding: 0 10px;
+   padding: 12px;
    font-family: karla;
    display: flex;
    flex-direction: column;
-   gap: .5rem;
+   gap: .6rem;
 `
 
 export const Title = styled.h1`
    font-size: 1rem;
    font-weight: 400;
-   color: var(--positive);   
+   color: var(--positive);
+   padding-bottom: .1rem;   
    border-bottom: 1px solid var(--background);
 
 
 `
 export const TopSection = styled.div`
-   padding: 10px 0 0 0;
 
 `
 export const Content = styled.div`
@@ -43,6 +42,7 @@ export const Content = styled.div`
       font-weight: 600;
    }
    p{
+      font-size: 12px;
       color: var(--textTerciary);
       opacity: .5;
    }
@@ -50,7 +50,7 @@ export const Content = styled.div`
 `
 export const CardFooter = styled.div`
    display: flex;
-   gap: .5rem;
+   gap: 1rem;
    div {
       display: flex;
       gap: .2rem;

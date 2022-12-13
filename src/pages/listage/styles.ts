@@ -8,7 +8,10 @@ export const Container = styled.div`
 export const Content = styled.div`
     display:flex;
     flex-direction: column;
-    width: 75%;
+    width: 100%;
+    margin-right: 5rem;
     gap: 48px;
-    background-color: var(--background)
+    background-color: var(--background);
+`
+export const MainContent = styled.div`
 `
