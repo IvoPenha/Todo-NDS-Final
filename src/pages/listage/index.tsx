@@ -4,7 +4,7 @@ import { Container, Content, MainContent } from "./styles";
 import {faListUl} from '@fortawesome/free-solid-svg-icons'
 import { ListTable } from "../../components/Table/Table";
 
-interface sidebarProps{
+interface ListagemProps{
     isOpen: boolean
 }
 
@@ -13,7 +13,7 @@ export function Listage(){
     return(
         <Container>
         
-            <Sidebar />
+            <Sidebar currentPage="listagem"/>
         <Content>
             <MainHeader 
                 icon={faListUl}

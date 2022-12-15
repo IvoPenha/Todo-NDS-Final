@@ -9,13 +9,13 @@ import { TaskPage } from "../pages/TaskPage";
 
 
 export function ReactRoutes(){
-    const [isOpen, setIsOpen] = useState(false)
+  
     return(
         <BrowserRouter>
         <Routes>
           <Route path='/login' element={<AuthPage/>} />
           <Route path='/register' element={<Register/>}/>
-          <Route path='/Sidebar' element={<Listage/>} />
+          <Route path='/listagem' element={<Listage/>} />
           <Route path='/Tasks' element={<TaskPage/>} />
         </Routes>
         <GlobalStyle/>

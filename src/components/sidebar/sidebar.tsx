@@ -8,23 +8,28 @@ import { VanilaLink } from "./sidebar.styles";
 import { initState} from "../../hooks/useHook";
 
 
+interface SidebarProps{
+    currentPage: string;
+}
 
-export function Sidebar(){
+export function Sidebar({currentPage}: SidebarProps){
     const [isOpen, setIsOpen] = useState(true)
     
     function handleIsOpen(){
         setIsOpen(!isOpen)
     }
-
+    interface VanilaLinkProps{
+        namePage: string;
+    }
     return(
                
         <Container isOpen ={isOpen}>
             <TopSection>
-
+                
                 <li> {isOpen ? <img src={WhiteLogo} alt="" /> : <></>}  
                      <button onClick={handleIsOpen}><FontAwesomeIcon icon={faBars} size = 'xl' cursor={'pointer'} className='menu-icon'/></button></li>
-               <VanilaLink to={'/tasks'}>  <li><FontAwesomeIcon icon={faCheckSquare} size = '2xl' /> {isOpen ? <><h4>Tarefas<p>4</p></h4> </> : <></>}</li> </VanilaLink>
-               <VanilaLink to={'/Sidebar'}>  <li> <FontAwesomeIcon icon={faListUl} size = '2xl' /> {isOpen ? <h4>Listas</h4> : <></>} </li> </VanilaLink> 
+               <VanilaLink to={'/tasks'} namePage='tasks' currentPage={currentPage} >  <li><FontAwesomeIcon icon={faCheckSquare} size = '2xl' /> {isOpen ? <><h4>Tarefas<p>4</p></h4> </> : <></>}</li> </VanilaLink>
+               <VanilaLink to={'/listagem'} namePage='listagem' currentPage={currentPage} >  <li> <FontAwesomeIcon icon={faListUl} size = '2xl' /> {isOpen ? <h4>Listas</h4> : <></>} </li> </VanilaLink> 
                 
             </TopSection>
                 <BottomContainer isOpen ={isOpen}>

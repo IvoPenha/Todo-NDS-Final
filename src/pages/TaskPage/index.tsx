@@ -7,7 +7,7 @@ export function TaskPage(){
     return(
         <>
         <Container>
-            <Sidebar/>
+            <Sidebar currentPage="tasks"/>
             <Content>
             <MainHeader 
                 icon={faCheckSquare}

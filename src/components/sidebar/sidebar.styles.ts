@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Link, LinkProps } from "react-router-dom";
-
-export const Container = styled.ul<{ isOpen: boolean }>`
+import { Link, useLocation} from "react-router-dom";
+export const Container = styled.ul<{ isOpen: boolean}>`
     
     list-style:none;
     display: flex;
@@ -54,11 +53,19 @@ export const Container = styled.ul<{ isOpen: boolean }>`
         }
     
 `;
-export const VanilaLink = styled(Link)<
-  LinkProps & React.RefAttributes<HTMLAnchorElement>
->`
+
+
+export const VanilaLink = styled(Link)<{ namePage: string, currentPage: string }>`
+
     text-decoration: none;
     border: none;
+    li{
+      color: ${props => (props.currentPage == props.namePage ? 'var(--primary)': '')};
+      background: ${props => (props.currentPage == props.namePage ? 'white': '')};
+      p{
+        color: ${props => (props.currentPage == props.namePage ? 'var(--textSecondary)' : 'inherit')};
+      }
+    }
     &:hover li{
         
             color: var(--primary);
