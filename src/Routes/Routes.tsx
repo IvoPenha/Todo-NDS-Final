@@ -6,6 +6,7 @@ import AuthPage from "../pages/Authentication/AuthPage"
 import { Listage } from "../pages/listage";
 import Register from "../pages/Register/AuthPage";
 import { TaskPage } from "../pages/TaskPage";
+import { PageProvider } from "../hooks/useHook";
 
 
 export function ReactRoutes(){
@@ -13,8 +14,11 @@ export function ReactRoutes(){
     return(
         <BrowserRouter>
         <Routes>
+          <PageProvider>
+
           <Route path='/login' element={<AuthPage/>} />
           <Route path='/register' element={<Register/>}/>
+          </PageProvider>
           <Route path='/listagem' element={<Listage/>} />
           <Route path='/Tasks' element={<TaskPage/>} />
         </Routes>

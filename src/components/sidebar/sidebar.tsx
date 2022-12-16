@@ -5,7 +5,6 @@ import { faSignOut,faBars, faListUl,  } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import WhiteLogo from '../../assets/whiteLogo.svg'
 import { VanilaLink } from "./sidebar.styles";
-import { initState} from "../../hooks/useHook";
 
 
 interface SidebarProps{
