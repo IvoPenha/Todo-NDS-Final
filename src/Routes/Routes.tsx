@@ -14,11 +14,9 @@ export function ReactRoutes(){
     return(
         <BrowserRouter>
         <Routes>
-          <PageProvider>
 
           <Route path='/login' element={<AuthPage/>} />
           <Route path='/register' element={<Register/>}/>
-          </PageProvider>
           <Route path='/listagem' element={<Listage/>} />
           <Route path='/Tasks' element={<TaskPage/>} />
         </Routes>

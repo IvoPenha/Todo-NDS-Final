@@ -12,9 +12,5 @@ import { createContext, ReactNode, useContext, useState } from 'react';
    export function PageProvider({children} : ProviderProps): JSX.Element{
       const[isOpen, setIsOpen] = useState(false)
       
-      return (
-         <>
-         
-         </>
-      )
+      return <></>
    }

@@ -44,7 +44,8 @@ export const Content = styled.div`
    p{
       font-size: 12px;
       color: var(--textTerciary);
-      opacity: .5;
+      font-weight: 550;
+      opacity: 1;
    }
 
 `
