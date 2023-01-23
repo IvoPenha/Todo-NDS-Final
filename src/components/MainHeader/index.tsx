@@ -3,17 +3,18 @@ import { faListUl } from '@fortawesome/free-solid-svg-icons'
 import {IconDefinition} from '@fortawesome/fontawesome-common-types';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { MainButton } from "../MainButton";
-import { ReactNode } from "react";
+
 
 interface MainHeaderProps{
     title: string 
-    description: string 
+    description?: string 
     button: boolean 
-    buttonText: string 
+    buttonText: string
+    buttonOnClick?: Function 
     icon: IconDefinition 
 }
 
-export function MainHeader({title, description, button, buttonText, icon} : MainHeaderProps){
+export function MainHeader({title, description, button, buttonText, icon, buttonOnClick} : MainHeaderProps){
     return (
 
         <Header>
@@ -27,7 +28,7 @@ export function MainHeader({title, description, button, buttonText, icon} : Main
                 </div>
             </Container>
             <section>
-            {button && <MainButton Text={buttonText} />}
+            {button && <MainButton Text={buttonText} buttonOnClick={buttonOnClick} />}
 
             </section>
             

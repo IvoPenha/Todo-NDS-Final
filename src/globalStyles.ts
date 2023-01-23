@@ -11,16 +11,19 @@ const GlobalStyle = createGlobalStyle`
         --brand: #27C498;
         --positive: #0D6EFD;
         --success: #198754;
-        --warning: #FFC107;
+        --warning: #FFC200;
         --danger: #DC3545;
         
     }
     body {
+        height: 100vh;
         box-sizing: border-box;
+        background: var(--background);
         margin: 0;
         padding: 0;
         font-family: 'Poppins', sans-serif;
-        color: var(--textSecondary)
+        color: var(--textSecondary);
+        
     }
 `;
 

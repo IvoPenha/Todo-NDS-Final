@@ -2,6 +2,8 @@ import { AuthFormDiv, Form, Container } from "./styles";
 import Logo from '../../assets/Logo.svg';
 import Button from 'react-bootstrap/Button';
 import { useForm, SubmitHandler  } from "react-hook-form";
+import { api } from "../../services/api";
+import { useAuth } from "../../hooks/authContext";
 
 interface IntefaceFormInput {
     email: string;
@@ -9,9 +11,18 @@ interface IntefaceFormInput {
   }
 
 export function AuthForm(){
+    
+    const {signIn, user}  = useAuth()  
+    
+   
     const { register, handleSubmit } = useForm<IntefaceFormInput>();
-    const onSubmit: SubmitHandler<IntefaceFormInput> = data => console.log(data);
+    const onSubmit: SubmitHandler<IntefaceFormInput> = data => handleSignIn({email : data.email, password : data.password})
+    
+    function handleSignIn({email, password} : IntefaceFormInput) {
+        signIn({email, password}) 
+    }
 
+   
 
     return (
         <Container>

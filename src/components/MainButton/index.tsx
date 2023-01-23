@@ -1,12 +1,16 @@
 import { Container } from "./styles";
 
 interface MainButtonProps{
-    Text: string
+    Text: string;
+    BtnType?: string;
+    BtnSize?: string;
+    buttonOnClick?: (React.MouseEventHandler<HTMLButtonElement> & Function) | undefined
+
 }
 
-export function MainButton({Text} : MainButtonProps){
+export function MainButton({Text, BtnType, buttonOnClick, BtnSize} : MainButtonProps){
     return (
-        <Container>
+        <Container BtnType={BtnType} onClick={buttonOnClick} BtnSize={BtnSize}>
             {Text}
         </Container>
     )

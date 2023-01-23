@@ -2,12 +2,12 @@ import { Table } from "react-bootstrap";
 import styled from "styled-components";
 import DataTable, { TableColumn, TableProps} from 'react-data-table-component';
 interface DataRow {
-  title: string,
-  year: string,
+  name: string,
   actions: JSX.Element,
 }
 
-export const StyledTable = styled(DataTable)<TableColumn<DataRow>[]>` 
+
+export const StyledTable = styled(DataTable)` 
     border-collapse: collapse;
     border: var(--background) 1px solid;
     color: var(--textPrimary);
@@ -25,7 +25,7 @@ export const StyledTable = styled(DataTable)<TableColumn<DataRow>[]>`
       font-weight: 400;
       display: flex;
       justify-content: center;
-      padding: .75rem 0;
+      padding: 10px 0;
 
     } 
     .rdt_TableCol{
@@ -45,7 +45,7 @@ export const Container = styled.div`
   justify-content: center;
   height: fit-content;
   border-radius: 4px;
-  padding: 2rem .625rem 0;
+  padding: 1rem .625rem 0;
   width: 100%;
   &:first-child{
     text-align: center !important;
@@ -62,8 +62,8 @@ export const TableAction = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
+    padding: .4375rem;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
     border-radius: 4px;

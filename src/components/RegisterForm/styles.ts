@@ -11,14 +11,12 @@ export const AuthFormDiv = styled.div `
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin-top: 11rem;
+    margin-top: 8rem;
     h2{
         padding-left: 10px;
         border-left: 7px solid var(--brand);
     }
     
-
-
 `
 
 export const Form = styled.form`
@@ -55,6 +53,14 @@ export const Form = styled.form`
         }
         &:focus{
             outline: none;
+        }
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 50px var(--primary) inset;
+        }
+
+        /* Cor do texto do autocomplete */
+        &:-webkit-autofill {
+            -webkit-text-fill-color: var(--textSecondary) !important;
         }
        
     }

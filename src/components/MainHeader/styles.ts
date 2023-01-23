@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    height: 3.25rem;
     gap: .75rem;
     color : var(--textPrimary);
     display : flex;
@@ -20,7 +19,6 @@ export const IconDiv = styled.div`
     background: white;
 `
 export const Header = styled.div`
-    margin-top : 24px;
     height: fit-content;
     height: 3.25rem;
     width: 75%;
@@ -35,6 +33,7 @@ export const Header = styled.div`
     }
     section{
         position: absolute;
-        right: 5rem;
+        right: 0;
+        margin-right: 5rem;
     }
 `

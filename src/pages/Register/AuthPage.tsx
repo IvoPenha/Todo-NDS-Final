@@ -1,7 +1,7 @@
 import { Container } from "./styles"
 import { AuthForm } from "../../components/AuthForm"
 import Button from 'react-bootstrap/Button';
-import { Header } from "../../components/header"
+import { Header } from "../../components/AuthHeader"
 import GlobalStyle from "../../globalStyles"
 import { RegisterForm } from "../../components/RegisterForm";
 function Register() {

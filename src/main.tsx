@@ -1,9 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { ReactRoutes } from './Routes/Routes'
+import { Routes } from './Routes/index'
+import { SignInProvider } from './hooks/authContext'
+import GlobalStyles from './globalStyles'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+
   <React.StrictMode>
-    <ReactRoutes/>
+    <SignInProvider>
+      <Routes/>
+    </SignInProvider>
+    <GlobalStyles/>
   </React.StrictMode>
 )

@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Link, useLocation} from "react-router-dom";
-export const Container = styled.ul<{ isOpen: boolean}>`
-    
+import { Link, useLocation } from "react-router-dom";
+export const Container = styled.ul<{ isOpen: boolean }>`
     list-style:none;
     display: flex;
     flex-direction: column;
@@ -11,7 +10,7 @@ export const Container = styled.ul<{ isOpen: boolean}>`
     transition: width .3s;
     padding: 0 1rem;
     gap:32px;
-    height: 100vh;
+    min-height: 100vh;
     Link{
         background: white !important;
     }
@@ -54,16 +53,20 @@ export const Container = styled.ul<{ isOpen: boolean}>`
     
 `;
 
-
-export const VanilaLink = styled(Link)<{ namePage: string, currentPage: string }>`
+export const VanilaLink = styled(Link)<{ namepage: string; pageatual: string }>`
 
     text-decoration: none;
     border: none;
     li{
-      color: ${props => (props.currentPage == props.namePage ? 'var(--primary)': '')};
-      background: ${props => (props.currentPage == props.namePage ? 'white': '')};
+      color: ${(props) =>
+        props.pageatual == props.namepage ? "var(--primary)" : ""};
+      background: ${(props) =>
+        props.pageatual == props.namepage ? "white" : ""};
       p{
-        color: ${props => (props.currentPage == props.namePage ? 'var(--textSecondary)' : 'inherit')};
+        color: ${(props) =>
+          props.pageatual == props.namepage
+            ? "var(--textSecondary)"
+            : "inherit"};
       }
     }
     &:hover li{
@@ -79,18 +82,18 @@ export const VanilaLink = styled(Link)<{ namePage: string, currentPage: string }
 `;
 
 export const TopSection = styled.div`
-  list-style:none;
-    display: flex;
-    flex-direction: column;
-    transition: width .3s;
-    gap:2.5rem;
-`
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s;
+  gap: 2.5rem;
+`;
 
 export const BottomContainer = styled.div<{ isOpen: boolean }>`
   background-color: var(--secondary);
   width: ${(props) => (props.isOpen ? "14.5rem" : "7.5rem")};
   /* width: 120%; */
-  margin-left:-1.5rem;
+  margin-left: -1.5rem;
   transition: width 0.3s;
   display: flex;
   position: relative;

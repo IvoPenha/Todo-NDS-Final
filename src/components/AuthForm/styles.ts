@@ -43,6 +43,14 @@ export const Form = styled.form`
         width: 100%;
         background: none;
         border: none !important;
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 50px var(--primary) inset;         
+        }
+
+        /* Cor do texto do autocomplete */
+        &:-webkit-autofill {
+            -webkit-text-fill-color: var(--textSecondary) !important;
+        }
         &[type=submit]{
             background-color: var(--brand);
             border-radius: 4px;

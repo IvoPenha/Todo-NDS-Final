@@ -6,6 +6,7 @@ export const Container = styled.div`
     background-color: var(--background)
 `
 export const Content = styled.div`
+    margin-top : 24px;
     display:flex;
     flex-direction: column;
     width: 100%;
