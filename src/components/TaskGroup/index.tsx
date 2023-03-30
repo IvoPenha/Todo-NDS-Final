@@ -13,7 +13,7 @@ import { useSidebar } from "../../hooks/useSidebar";
 
 interface DataRow {
   name: string;
-  actions: JSX.Element;
+  actions: any;
 }
 
 const Tcolumns: TableColumn<DataRow>[] = [

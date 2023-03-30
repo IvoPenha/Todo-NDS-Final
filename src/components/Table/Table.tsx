@@ -10,7 +10,7 @@ import { ListEditionModal } from "../ModalListaEdit";
 
 interface DataRow {
   name: string;
-  actions: JSX.Element;
+  actions: any;
 }
 
 const Tcolumns: TableColumn<DataRow>[] = [

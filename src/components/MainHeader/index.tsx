@@ -10,7 +10,7 @@ interface MainHeaderProps{
     description?: string 
     button: boolean 
     buttonText: string
-    buttonOnClick?: Function 
+    buttonOnClick?: any 
     icon: IconDefinition 
 }
 
@@ -28,6 +28,7 @@ export function MainHeader({title, description, button, buttonText, icon, button
                 </div>
             </Container>
             <section>
+            
             {button && <MainButton Text={buttonText} buttonOnClick={buttonOnClick} />}
 
             </section>

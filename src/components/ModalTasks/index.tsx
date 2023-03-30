@@ -15,7 +15,7 @@ interface ModalProps {
 }
 interface ListModalProps {
   description: string;
-  deadline: Date,
+  deadline: any,
 
 }
 
