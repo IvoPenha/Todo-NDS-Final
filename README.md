@@ -1,6 +1,6 @@
 <h1>Projeto To-Do List</h1>
 
-<p>Este é o README.md do projeto frontend de um To-Do List, desenvolvido como projeto final para começar a contribuição no estágio e se provar como apto a contribuir. O projeto é feito puxando as rotas do mesmo projeto final feito pelo time do backend. Foi usado Styled Components para estilização, Axios para puxar rota e como provação, grande parte dos componentes foram criados a mão, sem a utilização de bibliotecas.</p>
+<p>Este é o arquivo README.md do projeto frontend de uma lista de tarefas (To-Do List), desenvolvido como projeto final para iniciar a contribuição no estágio e comprovar a aptidão para contribuir. O projeto consome as mesmas rotas do projeto final desenvolvido pelo time de backend. Para a estilização, utilizou-se a biblioteca Styled Components, enquanto que o Axios foi utilizado para o consumo de rotas. Para mostrar habilidades, grande parte dos componentes foi criada manualmente, sem o uso de bibliotecas pré-existentes.</p>
 
 <h2>Tecnologias utilizadas</h2>
 
